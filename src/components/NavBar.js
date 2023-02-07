@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/img/logo.png';
+import logo3 from '../assets/img/logo3.png';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.png';
@@ -39,17 +40,18 @@ export const NavBar = () => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
-            <img src={logo} alt="Logo" />
+            <img src={logo} alt="Logo" /> 
+            <p className="white">Sustainable product at affordable prices </p>
           </Navbar.Brand>
+          <span> <h1>Earthly</h1></span>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-              <Nav.Link href="#skills" className={activeLink === 'skills' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('skills')}>Skills</Nav.Link>
-              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
- 
+              <Nav.Link href="#shops" className={activeLink === 'shops' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('shops')}>Shop</Nav.Link>
+               
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
@@ -60,7 +62,10 @@ export const NavBar = () => {
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>
               </HashLink>
-            </span>
+            </span> 
+            <Navbar.Brand className="pal" href="/">
+              <img src={logo3} alt="Logo" /> 
+            </Navbar.Brand>
           </Navbar.Collapse>
         </Container>
       </Navbar>
